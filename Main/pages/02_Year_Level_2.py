@@ -57,7 +57,7 @@ for itrs, row in enumerate(rows):
                 <strong>Staying with other SOM Students?:</strong> {row.Staying_with_other_SOM_students}</br>
                 <strong>Staying with:</strong> {row.Staying_with}</br>
                 <strong>Father's Name and No.:</strong> {row.Father_No}</br>
-                <strong>Mother' Name and No.:</strong> {row.Mother_No}</br>
+                <strong>Mother's Name and No.:</strong> {row.Mother_No}</br>
                 <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
                 <strong>CEU Mail:</strong> {row.CEU_Mail}</br>
                 <strong>Mobile No.:</strong> {mobile}</br>
@@ -69,8 +69,6 @@ for itrs, row in enumerate(rows):
                 <strong>Covid19 Booster?</strong> {row.Covid19_Booster}</br>
                 </p></em>
                 <a href="{row.Vaccine_Id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
-                </p></em>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
          </div>
         </div>
         """, unsafe_allow_html=True)
