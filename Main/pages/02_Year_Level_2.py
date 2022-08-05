@@ -59,7 +59,17 @@ for itrs, row in enumerate(rows):
                 <strong>Father's Name and No.:</strong> {row.Father_No}</br>
                 <strong>Mother' Name and No.:</strong> {row.Mother_No}</br>
                 <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
-                </p>
+                <strong>CEU Mail:</strong> {row.CEU_Mail}</br>
+                <strong>Mobile No.:</strong> {mobile}</br>
+                <strong>PhilHealth?:</strong> {row.PhilHealth}</br>
+                <strong>PhilHealth Category:</strong> {row.PhilHealth_Category}</br>
+                <strong>Other Medical Insurance?:</strong> {row.Other_Medical_Insurance}</br>
+                <strong>Medical Insurances:</strong> {row.Medical_Insurance}</br>
+                <strong>Covid19 Vaccine?</strong> {row.Covid19_Vaccine}</br>
+                <strong>Covid19 Booster?</strong> {row.Covid19_Booster}</br>
+                </p></em>
+                <a href="{row.Vaccine_Id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
+                </p></em>
           <a href="#" class="btn btn-primary">Go somewhere</a>
          </div>
         </div>
