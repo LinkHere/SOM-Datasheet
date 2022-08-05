@@ -24,7 +24,7 @@ def run_query(query):
     rows = rows.fetchall()
     return rows
 
-sheet_url = st.secrets["private_gsheets_url"]
+sheet_url = st.secrets["yrl4"]
 
 with st.sidebar:
     selected = option_menu("Main Menu", ["Block 1-A", "Block 1-B", "Block 2-A", "Block 2-B", "Block 3-A", "Block 3-B", "Block 4-A", "Block 4-B", "Block 5-A", "Block 5-B"], menu_icon="house", default_index=0)
