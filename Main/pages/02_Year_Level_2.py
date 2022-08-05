@@ -31,7 +31,7 @@ sheet_url = st.secrets["yrl2"]
 
 # if selected:
     #selected = selected.replace('Block ', '')
-rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="{selected}"')
+rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 for itrs, row in enumerate(rows):
         
