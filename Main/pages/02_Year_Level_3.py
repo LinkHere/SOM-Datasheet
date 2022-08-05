@@ -23,7 +23,7 @@ def run_query(query):
     rows = rows.fetchall()
     return rows
 
-sheet_url = st.secrets["private_gsheets_url"]
+sheet_url = st.secrets["yrl3"]
 #rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
 
 with st.sidebar:
