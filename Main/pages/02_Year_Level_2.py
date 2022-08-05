@@ -50,8 +50,16 @@ for itrs, row in enumerate(rows):
          </div>
 
          <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <h5 class="card-title" style="color: #777"><u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
+                <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
+                <strong>Current Address:</strong> {row.Current_Address}</br>
+                <strong>Staying with Relatives?:</strong> {row.Staying_with_relatives}</br>
+                <strong>Staying with other SOM Students?:</strong> {row.Staying_with_other_SOM_students}</br>
+                <strong>Staying with:</strong> {row.Staying_with}</br>
+                <strong>Father's Name and No.:</strong> {row.Father_No}</br>
+                <strong>Mother' Name and No.:</strong> {row.Mother_No}</br>
+                <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
+                </p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
          </div>
         </div>
