@@ -44,7 +44,7 @@ for itrs, row in enumerate(rows):
         btn_state = "disabled"
         
     st.markdown(f"""
-        <div class="card">
+        <div class="card" style="margin-bottom: 2rem; color: #777;">
          <div class="card-header">
           Featured
          </div>
