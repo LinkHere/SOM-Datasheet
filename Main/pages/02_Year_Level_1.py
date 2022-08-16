@@ -24,13 +24,7 @@ def run_query(query):
     return rows
 
 sheet_url = st.secrets["yrl2"]
-#rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
 
-# with st.sidebar:
-#     selected = option_menu("Main Menu", ["Section A", "Section B"], menu_icon="house", default_index=0)
-
-# if selected:
-    #selected = selected.replace('Block ', '')
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 for itrs, row in enumerate(rows):
@@ -51,21 +45,21 @@ for itrs, row in enumerate(rows):
          <div class="card-body">
           <h5 class="card-title" style="color: #777"><u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
                 <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
-                <strong>Current Address:</strong> {row.Current_Address}</br>
-                <strong>Staying with Relatives?:</strong> {row.Staying_with_relatives}</br>
-                <strong>Staying with other SOM Students?:</strong> {row.Staying_with_other_SOM_students}</br>
-                <strong>Staying with:</strong> {row.Staying_with}</br>
+                <strong>Current Address:</strong> {row.Local_Address}</br>
+                <strong>Staying with Relatives?:</strong> {row.is_Staying_with_Family}</br>
+                <strong>Staying with other SOM Students?:</strong> {row.is_Staying_with_SOM_Students}</br>
+                <strong>Staying with:</strong> {row.is_Staying_With_Name}</br>
                 <strong>Father's Name and No.:</strong> {row.Father_No}</br>
                 <strong>Mother's Name and No.:</strong> {row.Mother_No}</br>
-                <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
+                <strong>Emergency Contact Person:</strong> {row.Emergency_Contact_Person}</br>
                 <strong>CEU Mail:</strong> {row.CEU_Mail}</br>
                 <strong>Mobile No.:</strong> {mobile}</br>
-                <strong>PhilHealth?:</strong> {row.PhilHealth}</br>
-                <strong>PhilHealth Category:</strong> {row.PhilHealth_Category}</br>
-                <strong>Other Medical Insurance?:</strong> {row.Other_Medical_Insurance}</br>
-                <strong>Medical Insurances:</strong> {row.Medical_Insurance}</br>
-                <strong>Covid19 Vaccine?</strong> {row.Covid19_Vaccine}</br>
-                <strong>Covid19 Booster?</strong> {row.Covid19_Booster}</br>
+                <strong>PhilHealth?:</strong> {row.has_PhilHealth}</br>
+                <strong>PhilHealth Category:</strong> {row.Philhealth_Category}</br>
+                <strong>Other Medical Insurance?:</strong> {row.has_Other_Medical_Insurance}</br>
+                <strong>Medical Insurances:</strong> {row.List_of_Other_Medical_Insurance}</br>
+                <strong>Covid19 Vaccine?</strong> {row.has_Covid19_Vaccine}</br>
+                <strong>Covid19 Booster?</strong> {row.has_Covid19_Booster}</br>
                 </p></em>
                 <a href="{row.Vaccine_Id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
          </div>
