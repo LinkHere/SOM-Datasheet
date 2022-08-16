@@ -45,6 +45,7 @@ for itrs, row in enumerate(rows):
          <div class="card-body">
           <h5 class="card-title" style="color: #777"><u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
                 <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
+                <strong>Current Address:</strong> {row.Local_Address}</br>
                 <strong>Staying with Relatives?:</strong> {row.is_Staying_with_Family}</br>
                 <strong>Staying with other SOM Students?:</strong> {row.is_Staying_with_SOM_Students}</br>
                 <strong>Staying with:</strong> {row.is_Staying_With_Name}</br>
