@@ -52,7 +52,7 @@ for itrs, row in enumerate(rows):
                 <strong>Father's Name and No.:</strong> {row.Father_No}</br>
                 <strong>Mother's Name and No.:</strong> {row.Mother_No}</br>
                 <strong>Emergency Contact Person:</strong> {row.Emergency_Contact_Person}</br>
-                <strong>CEU Mail:</strong> {row.Other_EmailAdd}</br>
+                <strong>Other Email Add:</strong> {row.Other_EmailAdd}</br>
                 <strong>Mobile No.:</strong> {mobile}</br>
                 <strong>PhilHealth?:</strong> {row.has_PhilHealth}</br>
                 <strong>PhilHealth Category:</strong> {row.Philhealth_Category}</br>
