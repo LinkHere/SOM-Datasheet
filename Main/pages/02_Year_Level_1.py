@@ -27,7 +27,7 @@ sheet_url = st.secrets["yrl1"]
 
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-for itrs, row in enumerate(rows):
+for itrs, row in enumerate(rows, 1):
         
     if row.Mobile_No is not None:
         mobile = int(row.Mobile_No)
@@ -40,7 +40,7 @@ for itrs, row in enumerate(rows):
     st.markdown(f"""
         <div class="card" style="margin-bottom: 2rem; color: #777;">
          <div class="card-header">
-          <strong>{itrs}=+1</strong> | Year Level 1
+          <strong>{itrs}</strong> | Year Level 1
          </div>
          <div class="card-body">
           <h5 class="card-title" style="color: #777"><u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
