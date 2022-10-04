@@ -33,7 +33,7 @@ sheet_url = st.secrets["yrl2"]
     #selected = selected.replace('Block ', '')
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-for itrs, row in enumerate(rows):
+for itrs, row in enumerate(rows, 1):
         
     if row.Mobile_No is not None:
         mobile = int(row.Mobile_No)
