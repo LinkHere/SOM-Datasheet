@@ -58,8 +58,8 @@ for itrs, row in enumerate(rows):
                 <strong>PhilHealth Category:</strong> {row.Philhealth_Category}</br>
                 <strong>Other Medical Insurance?:</strong> {row.has_Other_Medical_Insurance}</br>
                 <strong>Medical Insurances:</strong> {row.List_of_Other_Medical_Insurance}</br>
-                <strong>Covid19 Vaccine?</strong> {row.has_Covid19_Vaccine}</br>
-                <strong>Covid19 Booster?</strong> {row.has_Covid19_Booster}</br>
+                <strong>Covid19 Vaccine?:</strong> {row.has_Covid19_Vaccine}</br>
+                <strong>Covid19 Booster?:</strong> {row.has_Covid19_Booster}</br>
                 </p></em>
                 <a href="{row.Vaccine_Id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
          </div>
