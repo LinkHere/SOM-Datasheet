@@ -46,10 +46,10 @@ if selected:
         st.markdown(f"""
             <div class="card" style="margin-bottom: 2rem; color: #777;">
               <div class="card-header">
-               <strong style="color: #db0121">{itrs}</strong> | Year Level 3 - {row.Section}
+               Year Level 3 - {row.Section}
               </div>
               <div class="card-body">
-                <h5 class="card-title" style="color: #777"><u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
+                <h5 class="card-title" style="color: #777"><strong style="color: #db0121">{itrs}</strong>|&nbsp;<u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
                 <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
                 <strong>Current Address:</strong> {row.Current_Address}</br>
                 <strong>Staying with Relatives?:</strong> {row.Staying_with_relatives}</br>
