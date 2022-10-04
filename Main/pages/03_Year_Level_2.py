@@ -46,7 +46,7 @@ for itrs, row in enumerate(rows, 1):
     st.markdown(f"""
         <div class="card" style="margin-bottom: 2rem; color: #777;">
          <div class="card-header">
-          <strong style="color: #db0121">{itrs}</strong> | Year Level 2
+          Year Level 2
          </div>
 
          <div class="card-body">
