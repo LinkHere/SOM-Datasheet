@@ -22,8 +22,14 @@ def run_query(query):
     rows = rows.fetchall()
     return rows
 
-sheet_url = st.secrets["yrl1"]
+sheet_url1 = st.secrets["yrl1"]
+sheet_url2 = st.secrets["yrl2"]
+sheet_url3 = st.secrets["yrl3"]
 
-rows = run_query(f'SELECT Last_Name FROM "{sheet_url}"')
+rows1 = run_query(f'SELECT Last_Name FROM "{sheet_url1}"')
+rows2 = run_query(f'SELECT Last_Name FROM "{sheet_url2}"')
+rows3 = run_query(f'SELECT Last_Name FROM "{sheet_url3}"')
 
-st.write(len(rows))
+st.write("1st Yr",len(rows1))
+st.write("2nd Yr",len(rows2))
+st.write("3rd Yr",len(rows3))
