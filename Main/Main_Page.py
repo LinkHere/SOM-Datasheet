@@ -47,7 +47,7 @@ st.markdown(f"""
                 </button>
             </li>
             <li class="list-group-item">
-                <h5>Example heading <span class="badge bg-secondary">New</span></h5>
+                <h5>3rd Year <span class="badge bg-secondary">{len(rows3)}</span></h5>
             </li>
         </ul>
     </div>
