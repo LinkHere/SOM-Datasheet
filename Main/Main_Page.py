@@ -39,6 +39,9 @@ st.markdown(f"""
             <li class="list-group-item">
                 <h5>1st Year <span class="badge bg-secondary">{len(rows1)}</span></h5>
             </li>
+            <li class="list-group-item">
+                <h5>2nd Year <span class="badge bg-secondary">{len(rows2)}</span></h5>
+            </li>
         </ul>
     </div>
 """, unsafe_allow_html=True)
