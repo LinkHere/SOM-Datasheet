@@ -33,3 +33,7 @@ rows3 = run_query(f'SELECT Last_Name FROM "{sheet_url3}"')
 st.write("1st Yr",len(rows1))
 st.write("2nd Yr",len(rows2))
 st.write("3rd Yr",len(rows3))
+
+st.markdown(f"""
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+""", unsafe_allow_html=True)
