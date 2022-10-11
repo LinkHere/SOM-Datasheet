@@ -42,7 +42,7 @@ st.markdown(f"""
             <li class="list-group-item">A third item</li>
         </ul>
     </div>
-""")
+""", unsafe_allow_html=True)
 st.write("1st Yr",len(rows1))
 st.write("2nd Yr",len(rows2))
 st.write("3rd Yr",len(rows3))
