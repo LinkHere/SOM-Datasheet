@@ -33,7 +33,7 @@ rows3 = run_query(f'SELECT Last_Name FROM "{sheet_url3}"')
 st.markdown(f"""
     <div class="card" style="width: 18rem;">
         <div class="card-header">
-            Featured
+            Students
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
@@ -41,8 +41,16 @@ st.markdown(f"""
                     1st Year <span class="badge text-bg-secondary">{len(rows1)}</span>
                 </button>
             </li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-primary">
+                    2nd Year <span class="badge text-bg-secondary">{len(rows2)}</span>
+                </button>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-primary">
+                    3rd Year <span class="badge text-bg-secondary">{len(rows3)}</span>
+                </button>
+            </li>
         </ul>
     </div>
 """, unsafe_allow_html=True)
