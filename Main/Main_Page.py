@@ -37,24 +37,19 @@ st.markdown(f"""
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
-                <button type="button" class="btn btn-primary">
-                    1st Year <span class="badge text-bg-secondary">{len(rows1)}</span>
-                </button>
+                <h5>1st Year <span class="badge bg-secondary">{len(rows1)}</span></h5>
             </li>
+            
             <li class="list-group-item">
-                <button type="button" class="btn btn-primary">
-                    2nd Year <span class="badge text-bg-secondary">{len(rows2)}</span>
-                </button>
+                <h5>2nd Year <span class="badge bg-secondary">{len(rows2)}</span></h5>
             </li>
+            
             <li class="list-group-item">
                 <h5>3rd Year <span class="badge bg-secondary">{len(rows3)}</span></h5>
             </li>
         </ul>
     </div>
 """, unsafe_allow_html=True)
-st.write("1st Yr",len(rows1))
-st.write("2nd Yr",len(rows2))
-st.write("3rd Yr",len(rows3))
 
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
