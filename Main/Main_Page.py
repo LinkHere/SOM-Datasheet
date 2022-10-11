@@ -38,7 +38,7 @@ st.markdown(f"""
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
                 <button type="button" class="btn btn-primary">
-                    1st Year <span class="badge text-bg-secondary">{{len(rows1)}}</span>
+                    1st Year <span class="badge text-bg-secondary">{len(rows1)}</span>
                 </button>
             </li>
             <li class="list-group-item">A second item</li>
