@@ -74,8 +74,8 @@ st.markdown(f"""
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title" style="color: #777;">1st Year Students</h5>
-        <p class="card-text"><h6 style="color: #777;">Found: <span class="badge bg-danger">{len(rows1)}</span></h6></p>
+        <h5 class="card-title" style="color: #777;">3rd Year Students</h5>
+        <p class="card-text"><h6 style="color: #777;">Found: <span class="badge bg-danger">{len(rows3)}</span></h6></p>
         <p class="card-text">👈 <em>Click on the sidebar</em></p>
       </div>
     </div>
@@ -84,8 +84,8 @@ st.markdown(f"""
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title" style="color: #777;">2nd Year Students</h5>
-        <p class="card-text"><h6 style="color: #777;">Found: <span class="badge bg-danger">{len(rows2)}</span></h6></p>
+        <h5 class="card-title" style="color: #777;">4th Year Students</h5>
+        <p class="card-text"><h6 style="color: #777;">Found: <span class="badge bg-danger"></span></h6></p>
         <p class="card-text">👈<em>Click on the sidebar</em></p>
       </div>
     </div>
