@@ -25,10 +25,12 @@ def run_query(query):
 sheet_url1 = st.secrets["yrl1"]
 sheet_url2 = st.secrets["yrl2"]
 sheet_url3 = st.secrets["yrl3"]
+sheet_url4 = st.secrets["yrl4"]
 
 rows1 = run_query(f'SELECT Last_Name FROM "{sheet_url1}"')
 rows2 = run_query(f'SELECT Last_Name FROM "{sheet_url2}"')
 rows3 = run_query(f'SELECT Last_Name FROM "{sheet_url3}"')
+rows4 = run_query(f'SELECT Last_Name FROM "{sheet_url4}"')
 
 st.markdown(f"""
 <!--    <div class="card" style="width: 18rem; color: #777;">
@@ -85,7 +87,7 @@ st.markdown(f"""
     <div class="card">
       <div class="card-body">
         <h5 class="card-title" style="color: #777;">4th Year Students</h5>
-        <p class="card-text"><h6 style="color: #777;">Found: <span class="badge bg-danger"></span></h6></p>
+        <p class="card-text"><h6 style="color: #777;">Found: <span class="badge bg-danger">{len(rows3)}</span></h6></p>
         <p class="card-text">👈<em>Click on the sidebar</em></p>
       </div>
     </div>
