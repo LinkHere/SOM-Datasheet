@@ -43,7 +43,7 @@ for itrs, row in enumerate(rows, 1):
           Year Level 1
          </div>
          <div class="card-body">
-          <h5 class="card-title" style="color: #777"><strong style="color: #db0121">{itrs}</strong>|&nbsp;<u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
+          <!--<h5 class="card-title" style="color: #777"><strong style="color: #db0121">{itrs}</strong>|&nbsp;<u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
                 <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
                 <strong>Current Address:</strong> {row.Local_Address}</br>
                 <strong>Staying with Relatives?:</strong> {row.is_Staying_with_Family}</br>
@@ -61,7 +61,12 @@ for itrs, row in enumerate(rows, 1):
                 <strong>Covid19 Vaccine?:</strong> {row.has_Covid19_Vaccine}</br>
                 <strong>Covid19 Booster?:</strong> {row.has_Covid19_Booster}</br>
                 </p></em>
-                <a href="{row.Vaccine_Id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
+                <a href="{row.Vaccine_Id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>-->
+                
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                  <label for="floatingTextarea">Comments</label>
+                </div>
          </div>
         </div>
         """, unsafe_allow_html=True)
