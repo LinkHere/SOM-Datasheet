@@ -58,16 +58,16 @@ st.markdown(f"""
       </div>
     </div>
   </div>
+  
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title" style="color: #777;">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title" style="color: #777;">2nd Year Students</h5>
+        <p class="card-text"><h6 style="color: #777;">Found: <span class="badge bg-danger">{len(rows2)}</span></h6></p>
+        <p class="card-text">👈<em>Click on the sidebar</em></p>
       </div>
     </div>
   </div>
-</div>
 
 <div class="row" style="color: #777;">
   <div class="col-sm-6">
