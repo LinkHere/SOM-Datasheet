@@ -39,8 +39,8 @@ for itrs, row in enumerate(rows, 1):
         
     st.markdown(f"""
         <form>
-        <fieldset class="border p-2">
-           <legend  class="float-none w-auto p-2">Your Legend</legend>
+        <fieldset class="border p-1">
+           <legend  class="w-auto p-1">Your Legend</legend>
            <input type="text">
         </fieldset>
         </form>
