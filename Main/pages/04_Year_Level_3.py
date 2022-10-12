@@ -44,7 +44,21 @@ if selected:
             btn_state = "disabled"
         
         st.markdown(f"""
-            <div class="card" style="margin-bottom: 2rem; color: #777;">
+            tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
+
+            with tab1:
+               st.header("A cat")
+               st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
+
+            with tab2:
+               st.header("A dog")
+               st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+
+            with tab3:
+               st.header("An owl")
+               st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+               
+            <!--<div class="card" style="margin-bottom: 2rem; color: #777;">
               <div class="card-header">
                Year Level 3 - {row.Section}
               </div>
@@ -68,7 +82,7 @@ if selected:
                 </p></em>
                 <a href="{row.Vaccine_id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
               </div>
-            </div> 
+            </div>--> 
         """, unsafe_allow_html=True)
 
 st.markdown(f"""
