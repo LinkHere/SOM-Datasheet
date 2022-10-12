@@ -31,7 +31,7 @@ rows2 = run_query(f'SELECT Last_Name FROM "{sheet_url2}"')
 rows3 = run_query(f'SELECT Last_Name FROM "{sheet_url3}"')
 
 st.markdown(f"""
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem; color: #777;">
         <div class="card-header">
             Students
         </div>
