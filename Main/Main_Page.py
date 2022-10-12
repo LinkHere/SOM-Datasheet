@@ -35,7 +35,7 @@ st.markdown(f"""
         <div class="card-header">
             Students
         </div>
-        <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush" color: #777;">
             <li class="list-group-item">
                 <h6>1st Year <span class="badge bg-secondary">{len(rows1)}</span></h6>
             </li>
