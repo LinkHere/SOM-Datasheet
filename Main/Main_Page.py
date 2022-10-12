@@ -67,7 +67,7 @@ st.markdown(f"""
       </div>
     </div>
   </div>
-</div>
+</div style="margin-bottom: 10px">
 
 <div class="row">
   <div class="col-sm-6">
