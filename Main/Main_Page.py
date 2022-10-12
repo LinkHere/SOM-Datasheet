@@ -54,7 +54,7 @@ st.markdown(f"""
       <div class="card-body">
         <h5 class="card-title" style="color: #777;">1st Year Students</h5>
         <p class="card-text">Found: <span class="badge bg-danger">{len(rows1)}</span></p>
-        <p><strong><<< Click on the sidebar</strong></p>
+        <p class="card-text">👈 Click on the sidebar</p>
       </div>
     </div>
   </div>
