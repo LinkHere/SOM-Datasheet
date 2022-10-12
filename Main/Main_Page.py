@@ -69,7 +69,7 @@ st.markdown(f"""
   </div>
 </div>
 
-<div class="row">
+<div class="row" style="color: #777;">
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
