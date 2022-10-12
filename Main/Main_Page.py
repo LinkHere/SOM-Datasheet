@@ -48,7 +48,7 @@ st.markdown(f"""
 #        </ul>
 #    </div>-->
 
-<div class="row" style="margin-bottom: 10px;">
+<div class="row" style="margin-bottom: 15px;">
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
