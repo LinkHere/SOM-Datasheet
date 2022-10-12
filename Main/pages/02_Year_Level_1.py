@@ -38,14 +38,10 @@ for itrs, row in enumerate(rows, 1):
         btn_state = "disabled"
         
     st.markdown(f"""
-        <div class="form-floating">
-            <textarea class="form-control" value="{row.Permanent_Address}"></textarea>
-            <label for="floatingTextarea">Permanent Address</label>
-        </div>
-        <form class="form-floating">
-          <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com" value="test@example.com">
-          <label for="floatingInputInvalid">Invalid input</label>
-        </form>
+         <fieldset>
+            <legend>Permanent Address</legend>
+            <p>{row.Permanent_Address}</>
+         </fieldset>
         <!--<div class="card" style="margin-bottom: 2rem; color: #777;">
          <div class="card-header">
           Year Level 1
