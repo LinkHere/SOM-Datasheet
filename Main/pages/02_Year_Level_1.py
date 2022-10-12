@@ -39,8 +39,10 @@ for itrs, row in enumerate(rows, 1):
         
     st.markdown(f"""
         <div class="form-floating">
-            <textarea class="form-control" id="floatingTextarea" value="{row.Permanent_Address}"></textarea>
+            <textarea class="form-control" value="{row.Permanent_Address}"></textarea>
             <label for="floatingTextarea">Permanent Address</label>
+            <input type="email" class="form-control" value="{row.is_Staying_with_Family}">
+            <label for="floatingInputValue">Staying with Relatives?</label>
         </div>
         <!--<div class="card" style="margin-bottom: 2rem; color: #777;">
          <div class="card-header">
