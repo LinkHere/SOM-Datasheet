@@ -44,20 +44,6 @@ if selected:
             btn_state = "disabled"
         
         st.markdown(f"""
-            tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
-
-            with tab1:
-               st.header("A cat")
-               st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
-
-            with tab2:
-               st.header("A dog")
-               st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
-
-            with tab3:
-               st.header("An owl")
-               st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
-               
             <!--<div class="card" style="margin-bottom: 2rem; color: #777;">
               <div class="card-header">
                Year Level 3 - {row.Section}
@@ -84,8 +70,22 @@ if selected:
               </div>
             </div>--> 
         """, unsafe_allow_html=True)
+        
+ tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
 
-st.markdown(f"""
+with tab1:
+    st.header("A cat")
+    st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
+
+with tab2:
+    st.header("A dog")
+    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+
+with tab3:
+    st.header("An owl")
+    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+
+    st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 """, unsafe_allow_html=True)
