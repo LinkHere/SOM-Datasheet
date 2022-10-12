@@ -38,10 +38,12 @@ for itrs, row in enumerate(rows, 1):
         btn_state = "disabled"
         
     st.markdown(f"""
+        <form>
          <fieldset>
             <legend>Permanent Address</legend>
             <p>{row.Permanent_Address}</>
          </fieldset>
+        </form> 
         <!--<div class="card" style="margin-bottom: 2rem; color: #777;">
          <div class="card-header">
           Year Level 1
