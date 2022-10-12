@@ -39,7 +39,7 @@ for itrs, row in enumerate(rows, 1):
         
     st.markdown(f"""
         <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <textarea class="form-control" id="floatingTextarea"></textarea>
             <label for="floatingTextarea">Comments</label>
         </div>
         <!--<div class="card" style="margin-bottom: 2rem; color: #777;">
