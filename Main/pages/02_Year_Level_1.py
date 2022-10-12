@@ -38,12 +38,20 @@ for itrs, row in enumerate(rows, 1):
         btn_state = "disabled"
         
     st.markdown(f"""
-        <form>
-         <fieldset>
-            <legend>Permanent Address</legend>
-            <p>{row.Permanent_Address}</>
-         </fieldset>
-        </form> 
+<form action="/action_page.php">
+  <fieldset>
+    <legend>Personalia:</legend>
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
         <!--<div class="card" style="margin-bottom: 2rem; color: #777;">
          <div class="card-header">
           Year Level 1
