@@ -70,18 +70,6 @@ if selected:
               </div>
             </div>--> 
         """, unsafe_allow_html=True)
-tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
-with tab1:
-    st.header("A cat")
-    st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
-
-with tab2:
-    st.header("A dog")
-    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
-
-with tab3:
-    st.header("An owl")
-    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
 
     st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
