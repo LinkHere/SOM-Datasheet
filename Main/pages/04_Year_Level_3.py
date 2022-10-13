@@ -70,7 +70,6 @@ if selected:
               </div>
             </div>--> 
         """, unsafe_allow_html=True)
-        
 tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
 with tab1:
     st.header("A cat")
