@@ -37,7 +37,7 @@ for itrs, row in enumerate(rows, 1):
     else:
         btn_state = "disabled"
     
-    student = st.checkbox('sample'}, key=itrs)
+    student = st.checkbox('sample'), key=itrs)
         
     st.markdown(f"""        
         <!-- <div class="card" style="margin-bottom: 2rem; color: #777;">
