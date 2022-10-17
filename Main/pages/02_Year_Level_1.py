@@ -27,6 +27,10 @@ sheet_url = st.secrets["yrl1"]
 
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
+st.markdown(f"""
+    
+""",unsafe_allow_html=true)
+
 for itrs, row in enumerate(rows, 1):
         
     if row.Mobile_No is not None:
@@ -36,8 +40,19 @@ for itrs, row in enumerate(rows, 1):
         btn_state = ""
     else:
         btn_state = "disabled"
-    
-    student = st.checkbox(label=f'{row.Last_Name}', key=itrs)
+    <table>
+        <thead>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    st.markdown(f"""
+        <div class="card">
+            <div class="card-header">
+                student = st.checkbox(label=f'{row.Last_Name}', key=itrs)                
+            </div>
+        </div>
+    """)
     if student:
         st.markdown(f"""
             {row.Permanent_Address}
