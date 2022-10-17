@@ -39,9 +39,13 @@ for itrs, row in enumerate(rows, 1):
     student = st.checkbox(label=f'{row.Last_Name}, {row.First_Name} ', key=itrs)
     if student:
         st.markdown(f"""
-            {row.Permanent_Address}
-            {row.Local_Address}
-            {row.is_Staying_with_Family}
+            <div class="card">
+                <div class="card-body">
+                    {row.Permanent_Address}
+                    {row.Local_Address}
+                    {row.is_Staying_with_Family}
+                </div>
+            </div>
     """, unsafe_allow_html=True)
         
     st.markdown(f"""        
