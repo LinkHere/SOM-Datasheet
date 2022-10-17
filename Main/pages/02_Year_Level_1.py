@@ -36,6 +36,8 @@ for itrs, row in enumerate(rows, 1):
         btn_state = ""
     else:
         btn_state = "disabled"
+    
+    student = st.checkbox({row.Last_Name})
         
     st.markdown(f"""        
         <!-- <div class="card" style="margin-bottom: 2rem; color: #777;">
