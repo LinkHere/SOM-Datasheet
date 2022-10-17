@@ -40,9 +40,7 @@ for itrs, row in enumerate(rows, 1):
     st.markdown(f"""
         <div class="card">
             <div class="card-header">
-    """, unsafe_allow_html=True)
-    student = st.checkbox(label=f'{row.Last_Name}', key=itrs)
-    st.markdown(f"""
+                student = st.checkbox(label=f'{row.Last_Name}', key=itrs)
             </div>
         </div>
     """, unsafe_allow_html=True)
