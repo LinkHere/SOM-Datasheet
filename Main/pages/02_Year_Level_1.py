@@ -38,7 +38,7 @@ for itrs, row in enumerate(rows, 1):
         btn_state = "disabled"
         
     st.markdown(f"""        
-        <div class="card" style="margin-bottom: 2rem; color: #777;">
+        <!-- <div class="card" style="margin-bottom: 2rem; color: #777;">
          <div class="card-header">
           Year Level 1
          </div>
@@ -63,7 +63,7 @@ for itrs, row in enumerate(rows, 1):
                 </p></em>
                 <a href="{row.Vaccine_Id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
          </div>
-        </div>
+        </div>-->
         """, unsafe_allow_html=True)
 
 st.markdown(f"""
