@@ -40,12 +40,7 @@ for itrs, row in enumerate(rows, 1):
         btn_state = ""
     else:
         btn_state = "disabled"
-    <table>
-        <thead>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+        
     st.markdown(f"""
         <div class="card">
             <div class="card-header">
