@@ -35,17 +35,8 @@ for itrs, row in enumerate(rows, 1):
     if row.Vaccine_Id is not None:
         btn_state = ""
     else:
-        btn_state = "disabled"  
-    student = st.checkbox(label=f'{row.Last_Name}', key=itrs)
-    asd = student
-    st.markdown(f"""
-        <div class="card">
-            <div class="card-header">
-                {asd}
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    
+        btn_state = "disabled"
+    student = st.checkbox(label=f'{row.Last_Name}, {row.First_Name} ', key=itrs)
     if student:
         st.markdown(f"""
             {row.Permanent_Address}
