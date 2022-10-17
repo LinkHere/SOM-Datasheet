@@ -27,10 +27,6 @@ sheet_url = st.secrets["yrl1"]
 
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-st.markdown(f"""
-    
-""",unsafe_allow_html=true)
-
 for itrs, row in enumerate(rows, 1):
         
     if row.Mobile_No is not None:
