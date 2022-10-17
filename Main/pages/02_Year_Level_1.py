@@ -36,20 +36,21 @@ for itrs, row in enumerate(rows, 1):
         btn_state = ""
     else:
         btn_state = "disabled"  
-        
+    student = st.checkbox(label=f'{row.Last_Name}', key=itrs)    
     st.markdown(f"""
         <div class="card">
             <div class="card-header">
-                student = st.checkbox(label=f'{row.Last_Name}', key=itrs)
+                {student}
             </div>
         </div>
     """, unsafe_allow_html=True)
+    
     if student:
         st.markdown(f"""
             {row.Permanent_Address}
             {row.Local_Address}
             {row.is_Staying_with_Family}
-        """)
+    """, unsafe_allow_html=True)
         
     st.markdown(f"""        
         <!-- <div class="card" style="margin-bottom: 2rem; color: #777;">
