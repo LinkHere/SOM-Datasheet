@@ -47,7 +47,7 @@ for itrs, row in enumerate(rows, 1):
                 student = st.checkbox(label=f'{row.Last_Name}', key=itrs)                
             </div>
         </div>
-    """)
+    """, unsafe_allow_html=True)
     if student:
         st.markdown(f"""
             {row.Permanent_Address}
