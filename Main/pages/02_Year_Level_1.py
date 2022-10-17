@@ -36,11 +36,12 @@ for itrs, row in enumerate(rows, 1):
         btn_state = ""
     else:
         btn_state = "disabled"  
-    student = st.checkbox(label=f'{row.Last_Name}', key=itrs)    
+    student = st.checkbox(label=f'{row.Last_Name}', key=itrs)
+    asd = student
     st.markdown(f"""
         <div class="card">
             <div class="card-header">
-                {student}
+                {asd}
             </div>
         </div>
     """, unsafe_allow_html=True)
