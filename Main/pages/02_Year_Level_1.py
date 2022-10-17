@@ -41,9 +41,9 @@ for itrs, row in enumerate(rows, 1):
         st.markdown(f"""
             <div class="card">
                 <div class="card-body">
-                    {row.Permanent_Address}
-                    {row.Local_Address}
-                    {row.is_Staying_with_Family}
+                    <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
+                    <strong>Current Address:</strong> {row.Local_Address}</br>
+                    <strong>Staying with Relatives?:</strong> {row.is_Staying_with_Family}</br>
                 </div>
             </div>
     """, unsafe_allow_html=True)
