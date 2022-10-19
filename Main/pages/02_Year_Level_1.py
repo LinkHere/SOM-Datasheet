@@ -46,11 +46,11 @@ for itrs, row in enumerate(rows, 1):
         st.markdown(f"""<p>{row.Last_Name}, {row.First_Name} {row.Middle_Initial}</p>""", unsafe_allow_html=True)
         
     with col3:
-        student = st.checkbox(label="", key=itrs)
+        student = st.checkbox(label="View Details", key=itrs)
     
     if student:
         st.markdown(f"""
-            <div class="card" style="margin-bottom: 10px; color: #777;">
+            <div class="card border-danger" style="margin-bottom: 10px; color: #777;">
                 <div class="card-body">
                     <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
                     <strong>Current Address:</strong> {row.Local_Address}</br>
