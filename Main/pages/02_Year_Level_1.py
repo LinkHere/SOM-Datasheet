@@ -46,7 +46,7 @@ for itrs, row in enumerate(rows, 1):
         st.markdown(f"""<p>{row.Last_Name}, {row.First_Name} {row.Middle_Initial}</p>""", unsafe_allow_html=True)
         
     with col3:
-        student = st.checkbox('View Details', key=itrs)
+        student = st.checkbox('View Details', key=itrs, value=False)
     
     if student:
         st.markdown(f"""
