@@ -32,16 +32,22 @@ rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
 #if selected:
     #selected = selected.replace('Block ', '')
 #    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="{selected}"')
+tab1, tab2 = st.tabs(["Section A","Section B"])
 
-for itrs, row in enumerate(rows, 1):
+with tab1:
+    for itrs, row in enumerate(rows, 1):
+
+        if row.Mobile_no is not None:
+            mobile = int(row.Mobile_no)
+
+        if row.Vaccine_id is not None:
+            btn_state = ""
+        else:
+            btn_state = "disabled"
         
-    if row.Mobile_no is not None:
-        mobile = int(row.Mobile_no)
-        
-    if row.Vaccine_id is not None:
-        btn_state = ""
-    else:
-        btn_state = "disabled"
+        st.markdown(f"""
+            {row.Last_Name}
+        """, unsafe_allow_html=True)
         
         st.markdown(f"""
             <!--<div class="card" style="margin-bottom: 2rem; color: #777;">
