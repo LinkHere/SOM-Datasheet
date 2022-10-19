@@ -56,7 +56,7 @@ for itrs, row in enumerate(rows, 1):
     
     if student:
         st.markdown(f"""
-            <div class="card" style="margin-top: -10px; margin-bottom: 2rem; color: #777;">
+            <div class="card" style="margin-top: -12px; margin-bottom: 2rem; color: #777;">
              <div class="card-body">
                     <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
                     <strong>Current Address:</strong> {row.Current_Address}</br>
