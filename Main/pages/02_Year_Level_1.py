@@ -37,7 +37,7 @@ for itrs, row in enumerate(rows, 1):
     else:
         btn_state = "disabled"
         
-    col1, col2, col3 = st.columns([0.2,3,2])
+    col1, col2, col3 = st.columns([0.3,3,2])
     
     with col1:
         st.markdown(f"""<span class="badge text-bg-danger">{itrs}</span>""", unsafe_allow_html=True)
