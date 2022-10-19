@@ -37,13 +37,16 @@ for itrs, row in enumerate(rows, 1):
     else:
         btn_state = "disabled"
         
-    col1, col2 = st.columns([0.1,3])
+    col1, col2, col3 = st.columns([0.1,3,0.1])
     
     with col1:
         st.markdown(f"""<span class="badge text-bg-danger">{itrs}</span>""", unsafe_allow_html=True)
     
     with col2:
-        student = st.checkbox(label=f'{row.Last_Name}, {row.First_Name} {row.Middle_Initial}', key=itrs)
+        st.markdown(f"""<p>{row.Last_Name}, {row.First_Name} {row.Middle_Initial}</p>""", unsafe_allow_html=True)
+        
+    with col3:
+        student = st.checkbox(key=itrs)
     
     if student:
         st.markdown(f"""
