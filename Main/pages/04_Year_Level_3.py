@@ -26,12 +26,12 @@ def run_query(query):
 sheet_url = st.secrets["yrl3"]
 #rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
 
-with st.sidebar:
-    selected = option_menu("Main Menu", ["Section A", "Section B"], menu_icon="house", default_index=0)
+#with st.sidebar:
+#    selected = option_menu("Main Menu", ["Section A", "Section B"], menu_icon="house", default_index=0)
 
-if selected:
+#if selected:
     #selected = selected.replace('Block ', '')
-    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="{selected}"')
+#    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="{selected}"')
 
     for itrs, row in enumerate(rows, 1):
         
@@ -44,7 +44,7 @@ if selected:
             btn_state = "disabled"
         
         st.markdown(f"""
-            <div class="card" style="margin-bottom: 2rem; color: #777;">
+            <!--<div class="card" style="margin-bottom: 2rem; color: #777;">
               <div class="card-header">
                Year Level 3 - {row.Section}
               </div>
@@ -68,7 +68,7 @@ if selected:
                 </p></em>
                 <a href="{row.Vaccine_id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
               </div>
-            </div>
+            </div>-->
         """, unsafe_allow_html=True)
 
     st.markdown(f"""
