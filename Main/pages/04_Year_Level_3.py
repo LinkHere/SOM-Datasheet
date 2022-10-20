@@ -16,16 +16,15 @@ credentials = service_account.Credentials.from_service_account_info(
 )
 
 conn = connect(credentials=credentials)
+sheet_url = st.secrets["yrl3"]
+rows_tab1 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
+rows_tab2 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section B"')
 
 @st.cache(ttl=600)
 def run_query(query):
     rows = conn.execute(query, headers=1)
     rows = rows.fetchall()
     return rows
-
-sheet_url = st.secrets["yrl3"]
-rows_tab1 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
-rows_tab2 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section B"')
 
 def show_details(rows, idx):
     for itrs, row in enumerate(rows, idx):
@@ -36,16 +35,17 @@ def show_details(rows, idx):
             btn_state = ""
         else:
             btn_state = "disabled"
-        st.markdown(f"""
-            {row.Last_Name}
-        """, unsafe_allow_html=True)
+        col1, col2, col3 = st.columns([0.3,3,2])
+    
+        with col1:
+            st.markdown(f"""<span class="badge text-bg-danger">{itrs}</span>""", unsafe_allow_html=True)
+    
+        with col2:
+            st.markdown(f"""<p>{row.Last_Name}, {row.First_Name} {row.Middle_Initial}</p>""", unsafe_allow_html=True)
+        
+        with col3:
+            student = st.checkbox('View Details', key=itrs, value=False)
 
-#with st.sidebar:
-#    selected = option_menu("Main Menu", ["Section A", "Section B"], menu_icon="house", default_index=0)
-
-#if selected:
-    #selected = selected.replace('Block ', '')
-#    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="{selected}"')
 tab1, tab2 = st.tabs(["Section A","Section B"])
 idx = 1
 with tab1:
