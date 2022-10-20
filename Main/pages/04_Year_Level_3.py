@@ -27,8 +27,8 @@ sheet_url = st.secrets["yrl3"]
 rows_tab1 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
 rows_tab2 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section B"')
 
-def show_details(rows, 1):
-    for itrs, row in enumerate(rows, 1):
+def show_details(rows, idx):
+    for itrs, row in enumerate(rows, idx):
         if row.Mobile_no is not None:
             mobile = int(row.Mobile_no)
 
@@ -47,9 +47,9 @@ def show_details(rows, 1):
     #selected = selected.replace('Block ', '')
 #    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="{selected}"')
 tab1, tab2 = st.tabs(["Section A","Section B"])
-
+idx = 1
 with tab1:
-    show_details(rows_tab1, 1)
+    show_details(rows_tab1, idx)
         
 
 st.markdown(f"""
