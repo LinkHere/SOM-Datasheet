@@ -45,7 +45,7 @@ def show_details(rows, idx):
             student = st.checkbox('View Details', key=row.CEU_mail, value=False)
         
         if student:
-            st.markdown(f"""<div class="card" style="margin-bottom: 2rem; color: #777;">
+            st.markdown(f"""<div class="card" style="margin-top: -13px; margin-bottom: 2rem; color: #777;">
               <div class="card-body">
                 <h5 class="card-title" style="color: #777"><strong style="color: #db0121">{itrs}</strong>|&nbsp;<u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
                 <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
