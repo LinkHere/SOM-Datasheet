@@ -51,7 +51,8 @@ with blck1a:
     show_details("1-A", idx)
 
 with blck1b:
-    show_details("1-B", idx)
+    if blck1b:
+        show_details("1-B", idx)
     
 with blck2a:
     show_details("2-A", idx)
