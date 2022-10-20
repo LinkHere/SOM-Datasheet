@@ -43,6 +43,30 @@ def show_details(rows, idx):
         
         with col3:
             student = st.checkbox('View Details', key=row.CEU_mail, value=False)
+        
+        if student:
+            st.markdown(f"""<div class="card" style="margin-bottom: 2rem; color: #777;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #777"><strong style="color: #db0121">{itrs}</strong>|&nbsp;<u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
+                <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
+                <strong>Current Address:</strong> {row.Current_Address}</br>
+                <strong>Staying with Relatives?:</strong> {row.Staying_with_relatives}</br>
+                <strong>Staying with other SOM Students?:</strong> {row.Staying_with_other_SOM_Students}</br>
+                <strong>Staying with:</strong> {row.Staying_with}</br>
+                <strong>Father's Name and No.:</strong> {row.Father_and_No}</br>
+                <strong>Mother' Name and No.:</strong> {row.Mother_and_No}</br>
+                <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
+                <strong>CEU Mail:</strong> {row.CEU_mail}</br>
+                <strong>Mobile No.:</strong> {mobile}</br>
+                <strong>PhilHealth?:</strong> {row.PhilHealth}</br>
+                <strong>PhilHealth Category:</strong> {row.PhilHealth_category}</br>
+                <strong>Other Medical Insurance?:</strong> {row.Other_Medical_Insurance}</br>
+                <strong>Medical Insurances:</strong> {row.Medical_Insurances}</br>
+                <strong>Covid19 Vaccine?</strong> {row.Covid19_vaccine}</br>
+                </p></em>
+                <a href="{row.Vaccine_id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
+              </div>
+            </div>""", unsafe_allow_html=True)
             
 rows_tab1 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
 rows_tab2 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section B"')
