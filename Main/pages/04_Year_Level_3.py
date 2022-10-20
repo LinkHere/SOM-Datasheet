@@ -27,17 +27,8 @@ sheet_url = st.secrets["yrl3"]
 rows_tab1 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
 rows_tab2 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section B"')
 
-#with st.sidebar:
-#    selected = option_menu("Main Menu", ["Section A", "Section B"], menu_icon="house", default_index=0)
-
-#if selected:
-    #selected = selected.replace('Block ', '')
-#    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="{selected}"')
-tab1, tab2 = st.tabs(["Section A","Section B"])
-
-with tab1:
-    for itrs, row in enumerate(rows_tab1, 1):
-
+def show_details(rows):
+    for itrs, row in enumerate(rows, 1)
         if row.Mobile_no is not None:
             mobile = int(row.Mobile_no)
 
@@ -49,6 +40,17 @@ with tab1:
         st.markdown(f"""
             {row.Last_Name}
         """, unsafe_allow_html=True)
+
+#with st.sidebar:
+#    selected = option_menu("Main Menu", ["Section A", "Section B"], menu_icon="house", default_index=0)
+
+#if selected:
+    #selected = selected.replace('Block ', '')
+#    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="{selected}"')
+tab1, tab2 = st.tabs(["Section A","Section B"])
+
+with tab1:
+    show_details(rows_tab1)
         
         st.markdown(f"""
             <!--<div class="card" style="margin-bottom: 2rem; color: #777;">
