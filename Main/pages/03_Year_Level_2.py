@@ -24,13 +24,6 @@ def run_query(query):
     return rows
 
 sheet_url = st.secrets["yrl2"]
-#rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
-
-# with st.sidebar:
-#     selected = option_menu("Main Menu", ["Section A", "Section B"], menu_icon="house", default_index=0)
-
-# if selected:
-    #selected = selected.replace('Block ', '')
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 for itrs, row in enumerate(rows, 1):
