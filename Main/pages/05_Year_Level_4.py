@@ -25,8 +25,7 @@ def run_query(query):
 
 sheet_url = st.secrets["yrl4"]
 
-def show_details(Block, idx):
-    rows = run_query(f'SELECT * FROM "{sheet_url} WHERE Block=Block "')
+def show_details(rows, idx):
     for itrs, row in enumerate(rows, idx):
         mobile = row.Mobile_No
         mobile = int(mobile)
@@ -48,11 +47,12 @@ blck1a, blck1b, blck2a, blck2b, blck3a, blck3b, blck4a, blck4b, blck5a, blck5b =
 idx = 1
 
 with blck1a:
-    show_details("1-A", idx)
+    blck1a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="1-A" "')
+    show_details(blck1a, idx)
 
 with blck1b:
-    if blck1b:
-        show_details("1-B", idx)
+    blck1b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="1-B" "')
+    show_details("1-B", idx)
     
 with blck2a:
     show_details("2-A", idx)
