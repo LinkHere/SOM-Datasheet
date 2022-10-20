@@ -36,7 +36,6 @@ def show_details(rows):
             btn_state = ""
         else:
             btn_state = "disabled"
-        
         st.markdown(f"""
             {row.Last_Name}
         """, unsafe_allow_html=True)
