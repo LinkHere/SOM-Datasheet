@@ -28,7 +28,7 @@ rows_tab1 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
 rows_tab2 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section B"')
 
 def show_details(rows):
-    for itrs, row in enumerate(rows, 1)
+    for itrs, row in enumerate(rows)
         if row.Mobile_no is not None:
             mobile = int(row.Mobile_no)
 
