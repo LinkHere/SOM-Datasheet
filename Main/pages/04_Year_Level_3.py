@@ -51,7 +51,6 @@ tab1, tab2 = st.tabs(["Section A","Section B"])
 with tab1:
     show_details(rows_tab1)
         
-        st.markdown(f"""
             <!--<div class="card" style="margin-bottom: 2rem; color: #777;">
               <div class="card-header">
                Year Level 3 - {row.Section}
@@ -77,7 +76,7 @@ with tab1:
                 <a href="{row.Vaccine_id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
               </div>
             </div>-->
-        """, unsafe_allow_html=True)
+
 
     st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
