@@ -50,6 +50,9 @@ tab1, tab2 = st.tabs(["Section A","Section B"])
 idx = 1
 with tab1:
     show_details(rows_tab1, idx)
+    
+with tab2:
+    show_details(rows_tab2, idx)
         
 
 st.markdown(f"""
