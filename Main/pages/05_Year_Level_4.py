@@ -50,7 +50,33 @@ idx = 1
 with blck1a:
     show_details("1-A", idx)
 
+with blck1b:
+    show_details("1-B", idx)
+    
+with blck2a:
+    show_details("2-A", idx)
 
+with blck2b:
+    show_details("2-B", idx)
+
+with blck3a:
+    show_details("3-A", idx)
+
+with blck3b:
+    show_details("3-B", idx)
+    
+with blck4a:
+    show_details("4-A", idx)
+
+with blck4b:
+    show_details("4-B", idx)
+    
+with blck5a:
+    show_details("5-A", idx)
+    
+with blck5b:
+    show_details("5-B", idx)
+    
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
