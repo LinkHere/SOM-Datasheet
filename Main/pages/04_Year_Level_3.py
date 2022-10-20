@@ -24,7 +24,7 @@ def run_query(query):
     rows = rows.fetchall()
     return rows
 
-def show_details(rows, idx, unqkey):
+def show_details(rows, idx):
     for itrs, row in enumerate(rows, idx):
         if row.Mobile_no is not None:
             mobile = int(row.Mobile_no)
@@ -42,7 +42,7 @@ def show_details(rows, idx, unqkey):
             st.markdown(f"""<p>{row.Last_Name}, {row.First_Name} {row.Middle_Initial}</p>""", unsafe_allow_html=True)
         
         with col3:
-            student = st.checkbox('View Details', key=row.CEU_mail, value=False)\
+            student = st.checkbox('View Details', key=row.CEU_mail, value=False)
             
 rows_tab1 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
 rows_tab2 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section B"')
