@@ -44,10 +44,10 @@ def show_details(Block, idx):
             {row.Last_Name}
         """)
             
-blck1a, blck1b, blck2a, blck2b = st.tabs(["Block1-A, Block1-B, Block2-A, Block2-B"])
+tab1, tab2, tab3, tab4 = st.tabs(["Block1-A, Block1-B, Block2-A, Block2-B"])
 idx = 1
 
-with blck1a:
+with tab1:
     show_details("1-A", idx)
 
 
