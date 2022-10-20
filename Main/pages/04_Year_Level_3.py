@@ -24,7 +24,8 @@ def run_query(query):
     return rows
 
 sheet_url = st.secrets["yrl3"]
-rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
+rows_tab1 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
+rows_tab2 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section B"')
 
 #with st.sidebar:
 #    selected = option_menu("Main Menu", ["Section A", "Section B"], menu_icon="house", default_index=0)
@@ -35,7 +36,7 @@ rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section A"')
 tab1, tab2 = st.tabs(["Section A","Section B"])
 
 with tab1:
-    for itrs, row in enumerate(rows, 1):
+    for itrs, row in enumerate(rows_tab1, 1):
 
         if row.Mobile_no is not None:
             mobile = int(row.Mobile_no)
