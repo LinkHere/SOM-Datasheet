@@ -47,43 +47,43 @@ blck1a, blck1b, blck2a, blck2b, blck3a, blck3b, blck4a, blck4b, blck5a, blck5b =
 idx = 1
 
 with blck1a:
-    blck1a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="1-A" "')
+    blck1a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block='1-A' "')
     show_details(blck1a, idx)
 
 with blck1b:
-    blck1b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="1-B" "')
+    blck1b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block='1-B' "')
     show_details(blck1b, idx)
     
 with blck2a:
-    blck2a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="2-A" "')
+    blck2a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block='2-A' "')
     show_details(blck2a, idx)
 
 with blck2b:
-    blck2b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="2-B" "')
+    blck2b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block='2-B' "')
     show_details(blck2b, idx)
 
 with blck3a:
-    blck3a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="3-A" "')
+    blck3a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block='3-A' "')
     show_details(blck3a, idx)
 
 with blck3b:
-    blck3b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="3-B" "')
+    blck3b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block='3-B' "')
     show_details(blck3b, idx)
     
 with blck4a:
-    blck4a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="4-A" "')
+    blck4a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block='4-A' "')
     show_details(blck4a, idx)
 
 with blck4b:
-    blck4b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="4-B" "')
+    blck4b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block='4-B' "')
     show_details(blck4b, idx)
     
 with blck5a:
-    blck5a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="5-A" "')
+    blck5a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block='5-A' "')
     show_details(blck5a, idx)
     
 with blck5b:
-    blck5b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="5-B" "')
+    blck5b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block='5-B' "')
     show_details(blck5b, idx)
     
 st.markdown(f"""
