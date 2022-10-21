@@ -51,14 +51,14 @@ with blck1a:
         b1a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="1-A" "')
         show_details(b1a, idx)
     except:
-        st.markdown("
+        st.markdown(f"""
                         <div class="alert alert-danger d-flex align-items-center" role="alert">
                           <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
                           <div>
                             An example danger alert with an icon
                           </div>
                         </div>
-                    ")
+                    """, unsafe_allow_html=True)
     
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
