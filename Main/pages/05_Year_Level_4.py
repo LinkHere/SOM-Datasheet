@@ -65,6 +65,30 @@ with blck2a:
 with blck2b:
     b2b = choose_block(sheet_url,"2-B")
     show_details(b2b, idx)
+    
+with blck3a:
+    b3a= choose_block(sheet_url,"3-A")
+    show_details(b3a, idx)
+
+with blck3b:
+    b3b = choose_block(sheet_url,"3-B")
+    show_details(b3b, idx)
+    
+with blck4a:
+    b4a = choose_block(sheet_url,"4-A")
+    show_details(b4a, idx)
+
+with blck4b:
+    b4b = choose_block(sheet_url,"4-B")
+    show_details(b4b, idx)
+    
+with blck5a:
+    b5a = choose_block(sheet_url,"5-A")
+    show_details(b5a, idx)
+    
+with blck5b:
+    b5b = choose_block(sheet_url,"5-B")
+    show_details(b5b, idx)
             
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
