@@ -47,44 +47,8 @@ blck1a, blck1b, blck2a, blck2b, blck3a, blck3b, blck4a, blck4b, blck5a, blck5b =
 idx = 1
 
 with blck1a:
-    #b1a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="1-A" "')
-    #show_details(blck1a, idx)
-
-with blck1b:
-    b1b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="1-B" "')
-    show_details(blck1b, idx)
-    
-with blck2a:
-    b2a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="2-A" "')
-    show_details(blck2a, idx)
-
-with blck2b:
-    b2b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="2-B" "')
-    show_details(blck2b, idx)
-
-with blck3a:
-    b3a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="3-A" "')
-    show_details(blck3a, idx)
-
-with blck3b:
-    b3b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="3-B" "')
-    show_details(blck3b, idx)
-    
-with blck4a:
-    b4a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="4-A" "')
-    show_details(blck4a, idx)
-
-with blck4b:
-    b4b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="4-B" "')
-    show_details(blck4b, idx)
-    
-with blck5a:
-    b5a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="5-A" "')
-    show_details(blck5a, idx)
-    
-with blck5b:
-    b5b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="5-B" "')
-    show_details(blck5b, idx)
+    b1a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="1-A" "')
+    show_details(blck1a, idx)
     
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
