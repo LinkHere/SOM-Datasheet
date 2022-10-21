@@ -47,8 +47,8 @@ blck1a, blck1b, blck2a, blck2b, blck3a, blck3b, blck4a, blck4b, blck5a, blck5b =
 idx = 1
 
 with blck1a:
-    b1a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="1-A" "')
-    show_details(blck1a, idx)
+    #b1a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="1-A" "')
+    #show_details(blck1a, idx)
 
 with blck1b:
     b1b = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="1-B" "')
