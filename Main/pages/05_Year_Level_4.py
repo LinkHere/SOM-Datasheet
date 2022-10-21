@@ -46,18 +46,22 @@ def show_details(rows, idx):
 blck1a, blck1b, blck2a, blck2b, blck3a, blck3b, blck4a, blck4b, blck5a, blck5b = st.tabs(["Block1-A", "Block1-B", "Block2-A", "Block2-B", "Block3-A", "Block3-B", "Block4-A", "Block4-B", "Block5-A", "Block5-B"])
 idx = 1
 
-with blck1a:
-    try:
+try:
+    with blck1a:
         b1a = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="1-A"')
         show_details(b1a, idx)
-    except:
-        st.markdown(f"""
-                        <div class="alert alert-danger">
-                          <div>
-                            Ahoy! Can't connect to server.
-                          </div>
-                        </div>
-                    """, unsafe_allow_html=True)
+    
+    with blck1b:
+        b1b = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="1B"')
+        show_details(b1b, idx)
+except:
+    st.markdown(f"""
+        <div class="alert alert-danger">
+            <div>
+                Ahoy! Can't connect to server.
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
     
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
