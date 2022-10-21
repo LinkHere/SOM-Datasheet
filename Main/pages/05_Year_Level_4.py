@@ -55,10 +55,10 @@ idx = 1
 
 with blck1a:
     try:
-        b1a = choose_block(sheet_url,"1-A")
+        b1a = choose_block(sheet_url,"1A")
         show_details(b1a, idx)
     except:
-        err_msg()
+        st.write("oooooooooooooooooo")
     
 with blck1b:
     try:
