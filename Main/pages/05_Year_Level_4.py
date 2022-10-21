@@ -54,7 +54,7 @@ with blck1a:
         st.markdown(f"""
                         <div class="alert alert-danger">
                           <div>
-                            An example danger alert with an icon
+                            Ahoy! Can't connect to server.
                           </div>
                         </div>
                     """, unsafe_allow_html=True)
