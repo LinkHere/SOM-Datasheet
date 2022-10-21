@@ -58,7 +58,7 @@ with blck1a:
         b1a = choose_block(sheet_url,"1A")
         show_details(b1a, idx)
     except:
-        st.write("oooooooooooooooooo")
+        st.markdown(f"""<p>kokokokokok</p>""", unsafe_allow_html=True)
     
 with blck1b:
     try:
