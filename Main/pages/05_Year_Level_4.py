@@ -48,7 +48,7 @@ idx = 1
 
 with blck1a:
     try:
-        b1a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="1-A" "')
+        b1a = run_query(f'SELECT * FROM "{sheet_url} WHERE Block="A" "')
         show_details(b1a, idx)
     except:
         st.markdown(f"""
