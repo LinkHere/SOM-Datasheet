@@ -57,6 +57,14 @@ with blck1a:
 with blck1b:
     b1b = choose_block(sheet_url,"1-B")
     show_details(b1b, idx)
+    
+with blck2a:
+    b2a = choose_block(sheet_url,"2-A")
+    show_details(b2a, idx)
+
+with blck2b:
+    b2b = choose_block(sheet_url,"2-B")
+    show_details(b2b, idx)
             
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
