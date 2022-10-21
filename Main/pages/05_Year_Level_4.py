@@ -46,9 +46,6 @@ def show_details(rows, idx):
 def choose_block(sheet_url, block):
     results = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="{block}"')
     return results
-
-def err_msg():
-    st.write("Error")
             
 blck1a, blck1b, blck2a, blck2b, blck3a, blck3b, blck4a, blck4b, blck5a, blck5b = st.tabs(["Block1-A", "Block1-B", "Block2-A", "Block2-B", "Block3-A", "Block3-B", "Block4-A", "Block4-B", "Block5-A", "Block5-B"])
 idx = 1
@@ -58,12 +55,14 @@ with blck1a:
         b1a = choose_block(sheet_url,"1A")
         show_details(b1a, idx)
     except:
+        st.write("Found Nothing")
     
 with blck1b:
     try:
         b1b = choose_block(sheet_url,"1B")
         show_details(b1b, idx)
     except:
+        st.write("Found Nothing")
             
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
