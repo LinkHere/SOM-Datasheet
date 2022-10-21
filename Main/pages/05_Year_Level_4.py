@@ -42,27 +42,39 @@ def show_details(rows, idx):
         st.markdown(f"""
             {row.Last_Name}
         """)
-            
-blck1a, blck1b, blck2a, blck2b, blck3a, blck3b, blck4a, blck4b, blck5a, blck5b = st.tabs(["Block1-A", "Block1-B", "Block2-A", "Block2-B", "Block3-A", "Block3-B", "Block4-A", "Block4-B", "Block5-A", "Block5-B"])
-idx = 1
+        
+ def choose_block(sheet_url, block):
+    results = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="{block}"')
+    return results
 
-try:
-    with blck1a:
-        b1a = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="1-A"')
-        show_details(b1a, idx)
-    
-    with blck1b:
-        b1b = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="1B"')
-        show_details(b1b, idx)
-except:
-    st.markdown(f"""
+err_msg():
+    return"""
+        st.markdown(f"""
         <div class="alert alert-danger">
             <div>
                 Ahoy! Can't connect to server.
             </div>
         </div>
         """, unsafe_allow_html=True)
+    """
+            
+blck1a, blck1b, blck2a, blck2b, blck3a, blck3b, blck4a, blck4b, blck5a, blck5b = st.tabs(["Block1-A", "Block1-B", "Block2-A", "Block2-B", "Block3-A", "Block3-B", "Block4-A", "Block4-B", "Block5-A", "Block5-B"])
+idx = 1
+
+with blck1a:
+    try:
+        b1a = choose_block(sheet_url,"1-A")
+        show_details(b1a, idx)
+    except:
+        err_msg()
     
+with blck1b:
+    try:
+        b1b = choose_block(sheet_url,"1-B")
+        show_details(b1b, idx)
+    except:
+        err_msg()
+            
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
