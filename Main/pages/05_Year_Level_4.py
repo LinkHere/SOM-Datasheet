@@ -48,15 +48,7 @@ def choose_block(sheet_url, block):
     return results
 
 def err_msg():
-    return"""
-        st.markdown(f"""
-        <div class="alert alert-danger">
-            <div>
-                Ahoy! Can't connect to server.
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-    """
+    return "st.markdown(f"""<div class="alert alert-danger"><div>Ahoy! Can't connect to server.</div></div>""", unsafe_allow_html=True)"
             
 blck1a, blck1b, blck2a, blck2b, blck3a, blck3b, blck4a, blck4b, blck5a, blck5b = st.tabs(["Block1-A", "Block1-B", "Block2-A", "Block2-B", "Block3-A", "Block3-B", "Block4-A", "Block4-B", "Block5-A", "Block5-B"])
 idx = 1
