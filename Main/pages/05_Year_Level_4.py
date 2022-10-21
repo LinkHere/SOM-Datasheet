@@ -51,11 +51,8 @@ blck1a, blck1b, blck2a, blck2b, blck3a, blck3b, blck4a, blck4b, blck5a, blck5b =
 idx = 1
 
 with blck1a:
-    try:
-        b1a = choose_block(sheet_url,"1A")
-        show_details(b1a, idx)
-    except:
-        st.write("Found Nothing")
+    b1a = choose_block(sheet_url,"1A")
+    show_details(b1a, idx)
     
 with blck1b:
     try:
