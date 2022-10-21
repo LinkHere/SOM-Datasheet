@@ -45,7 +45,7 @@ def show_details(rows, idx):
         
 def choose_block(sheet_url, block):
     results = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="{block}"')
-        return results
+    return results
 
 err_msg():
     return"""
