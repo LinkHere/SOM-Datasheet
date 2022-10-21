@@ -48,7 +48,7 @@ def choose_block(sheet_url, block):
     return results
 
 def err_msg():
-    print("st.markdown(f"""aaaaaaa""", unsafe_allow_html=True)")
+    print("Error")
             
 blck1a, blck1b, blck2a, blck2b, blck3a, blck3b, blck4a, blck4b, blck5a, blck5b = st.tabs(["Block1-A", "Block1-B", "Block2-A", "Block2-B", "Block3-A", "Block3-B", "Block4-A", "Block4-B", "Block5-A", "Block5-B"])
 idx = 1
