@@ -62,7 +62,7 @@ with blck1a:
     
 with blck1b:
     try:
-        b1b = choose_block(sheet_url,"1-B")
+        b1b = choose_block(sheet_url,"1B")
         show_details(b1b, idx)
     except:
         err_msg()
