@@ -39,9 +39,37 @@ def show_details(rows, idx):
         else:
             btn_state = "disabled"
         
-        st.markdown(f"""
-            {row.Last_Name}
-        """)
+        col1, col2, col3 = st.columns([0.3,3,2])
+    
+        with col1:
+            st.markdown(f"""<span class="badge text-bg-danger">{itrs}</span>""", unsafe_allow_html=True)
+    
+        with col2:
+            st.markdown(f"""<p>{row.Last_Name}, {row.First_Name} {row.Middle_Initial}</p>""", unsafe_allow_html=True)
+        
+        with col3:
+            student = st.checkbox('View Details', key=row.CEU_Mail, value=False)
+        
+        if student:
+            st.markdown(f"""<div class="card" style="margin-top: -13px; margin-bottom: 2rem; color: #777;">
+              <div class="card-body">
+                <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
+                <strong>Current Address:</strong> {row.Current_Address}</br>
+                <strong>Staying with?:</strong>{row.Leaving_With}</br>
+                <strong>Father's Name and No.:</strong> {row.Father_and_No}</br>
+                <strong>Mother' Name and No.:</strong> {row.Mother_and_No}</br>
+                <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
+                <strong>CEU Mail:</strong> {row.CEU_Mail}</br>
+                <strong>Mobile No.:</strong> {mobile}</br>
+                <strong>PhilHealth?:</strong> {row.PhilHealth}</br>
+                <strong>PhilHealth Category:</strong> {row.PhilHealth_Category}</br>
+                <strong>Medical Insurance?:</strong> {row.Medical_Insurance}</br>
+                <strong>List of Medical Insurances:</strong> {row.List_of_Medical_Insurances}</br>
+                <strong>Covid19 Vaccine?</strong> {row.Covid19_Vaccine}</br>
+                </p></em>
+                <a href="{row.Vaccine_id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
+              </div>
+            </div>""", unsafe_allow_html=True)
         
 def choose_block(sheet_url, block):
     results = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="{block}"')
