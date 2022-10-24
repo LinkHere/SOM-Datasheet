@@ -67,7 +67,7 @@ def show_details(rows, idx):
                 <strong>List of Medical Insurances:</strong> {row.List_of_Medical_Insurances}</br>
                 <strong>Covid19 Vaccine?</strong> {row.Covid19_Vaccine}</br>
                 </p></em>
-                <a href="{row.Vaccine_id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
+                <a href="{row.Vaccine_Id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
               </div>
             </div>""", unsafe_allow_html=True)
         
