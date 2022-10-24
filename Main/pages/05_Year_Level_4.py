@@ -48,7 +48,7 @@ def show_details(rows, idx):
             st.markdown(f"""<p>{row.Last_Name}, {row.First_Name} {row.Middle_Initial}</p>""", unsafe_allow_html=True)
         
         with col3:
-            student = st.checkbox('View Details', key=row.Vaccine_Id, value=False)
+            student = st.checkbox('View Details', key={row.Vaccine_Id}, value=False)
         
         if student:
             st.markdown(f"""<div class="card" style="margin-top: -13px; margin-bottom: 2rem; color: #777;">
