@@ -56,8 +56,8 @@ def show_details(rows, idx):
                 <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
                 <strong>Current Address:</strong> {row.Current_Address}</br>
                 <strong>Staying with?:</strong>{row.Leaving_With}</br>
-                <strong>Father's Name and No.:</strong> {row.Father_and_No}</br>
-                <strong>Mother' Name and No.:</strong> {row.Mother_and_No}</br>
+                <strong>Father's Name and No.:</strong> {row.Father_and_Mobile}</br>
+                <strong>Mother' Name and No.:</strong> {row.Mother_and_Mobile}</br>
                 <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
                 <strong>CEU Mail:</strong> {row.CEU_Mail}</br>
                 <strong>Mobile No.:</strong> {mobile}</br>
