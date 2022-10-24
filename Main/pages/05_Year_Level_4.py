@@ -58,7 +58,7 @@ def show_details(rows, idx):
                 <strong>Staying with?:</strong>{row.Leaving_With}</br>
                 <strong>Father's Name and No.:</strong> {row.Father_and_Mobile}</br>
                 <strong>Mother' Name and No.:</strong> {row.Mother_and_Mobile}</br>
-                <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
+                <strong>Emergency Contact Person:</strong> {row.Emergency_Contact_Person}</br>
                 <strong>CEU Mail:</strong> {row.CEU_Mail}</br>
                 <strong>Mobile No.:</strong> {mobile}</br>
                 <strong>PhilHealth?:</strong> {row.PhilHealth}</br>
