@@ -78,45 +78,49 @@ def choose_block(sheet_url, block):
 blck1a, blck1b, blck2a, blck2b, blck3a, blck3b, blck4a, blck4b, blck5a, blck5b = st.tabs(["Block1-A", "Block1-B", "Block2-A", "Block2-B", "Block3-A", "Block3-B", "Block4-A", "Block4-B", "Block5-A", "Block5-B"])
 idx = 1
 
-with blck1a:
-    b1a = choose_block(sheet_url,"1-A")
-    show_details(b1a, idx)
-    
-with blck1b:
-    b1b = choose_block(sheet_url,"1-B")
-    show_details(b1b, idx)
-    
-with blck2a:
-    b2a = choose_block(sheet_url,"2-A")
-    show_details(b2a, idx)
+try:
+    with blck1a:
+        b1a = choose_block(sheet_url,"1-A")
+        show_details(b1a, idx)
 
-with blck2b:
-    b2b = choose_block(sheet_url,"2-B")
-    show_details(b2b, idx)
-    
-with blck3a:
-    b3a= choose_block(sheet_url,"3-A")
-    show_details(b3a, idx)
+    with blck1b:
+        b1b = choose_block(sheet_url,"1-B")
+        show_details(b1b, idx)
 
-with blck3b:
-    b3b = choose_block(sheet_url,"3-B")
-    show_details(b3b, idx)
-    
-with blck4a:
-    b4a = choose_block(sheet_url,"4-A")
-    show_details(b4a, idx)
+    with blck2a:
+        b2a = choose_block(sheet_url,"2-A")
+        show_details(b2a, idx)
 
-with blck4b:
-    b4b = choose_block(sheet_url,"4-B")
-    show_details(b4b, idx)
-    
-with blck5a:
-    b5a = choose_block(sheet_url,"5-A")
-    show_details(b5a, idx)
-    
-with blck5b:
-    b5b = choose_block(sheet_url,"5-B")
-    show_details(b5b, idx)
+    with blck2b:
+        b2b = choose_block(sheet_url,"2-B")
+        show_details(b2b, idx)
+
+    with blck3a:
+        b3a= choose_block(sheet_url,"3-A")
+        show_details(b3a, idx)
+
+    with blck3b:
+        b3b = choose_block(sheet_url,"3-B")
+        show_details(b3b, idx)
+
+    with blck4a:
+        b4a = choose_block(sheet_url,"4-A")
+        show_details(b4a, idx)
+
+    with blck4b:
+        b4b = choose_block(sheet_url,"4-B")
+        show_details(b4b, idx)
+
+    with blck5a:
+        b5a = choose_block(sheet_url,"5-A")
+        show_details(b5a, idx)
+
+    with blck5b:
+        b5b = choose_block(sheet_url,"5-B")
+        show_details(b5b, idx)
+
+except:
+    st.write("Error Connecting to Google Server!")
             
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
