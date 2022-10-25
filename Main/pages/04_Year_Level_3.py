@@ -72,12 +72,15 @@ rows_tab2 = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="Section B"')
 tab1, tab2 = st.tabs(["Section A","Section B"])
 idx = 1
 
-with tab1:
-    show_details(rows_tab1, idx)
-    
-with tab2:
-    show_details(rows_tab2, idx)
-        
+try:
+    with tab1:
+        show_details(rows_tab1, idx)
+
+    with tab2:
+        show_details(rows_tab2, idx)
+except:
+    st.write("Error Connecting to Google Server!")
+
 
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
